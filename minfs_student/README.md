@@ -1,5 +1,9 @@
 # minfs_student
 
+新版 Java/Maven 分布式小文件 demo 已实现于 **[nexusstore/](nexusstore/README.md)**：手写 Raft、Netty 异步 RPC、一致性哈希、三节点故障演示、可选 Nacos。
+
+新项目构建入口为 `mvn -f nexusstore/pom.xml verify`。本目录原来的三个模块与以下说明保留为旧 minFS 参考。
+
 
 
 ## Getting started

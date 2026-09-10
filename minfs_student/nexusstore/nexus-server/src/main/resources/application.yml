@@ -1,0 +1,39 @@
+server:
+  address: 127.0.0.1
+  port: 8081
+  shutdown: graceful
+  tomcat:
+    threads:
+      max: 32
+      min-spare: 4
+    max-connections: 128
+    accept-count: 64
+spring:
+  application:
+    name: nexus-store
+  cloud:
+    nacos:
+      discovery:
+        enabled: false
+  mvc:
+    async:
+      request-timeout: 15000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+nexus:
+  node-id: node1
+  host: 127.0.0.1
+  rpc-port: 9091
+  data-dir: ./data/node1
+  peers: node1@127.0.0.1:9091,node2@127.0.0.1:9092,node3@127.0.0.1:9093
+  shard-count: 4
+  virtual-nodes: 64
+logging:
+  level:
+    com.alibaba.nacos: warn

@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: ${NACOS_ADDR:127.0.0.1:8848}
+        ip: ${nexus.host}
+        group: NEXUS_DEMO
+        metadata:
+          node-id: ${nexus.node-id}
+          netty-port: ${nexus.rpc-port}
